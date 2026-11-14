@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://kv7eg05nok54"]
+
+[ext_resource type="Texture2D" uid="uid://psu87a35aqy6" path="res://assets/art/03.jpg" id="1_ecxui"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_14w7c"]
+size = Vector2(1397, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ecxui"]
+size = Vector2(1397, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_erodg"]
+size = Vector2(380, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kwj0"]
+size = Vector2(380, 20)
+
+[node name="Stage" type="Node2D" unique_id=670156215]
+
+[node name="Backgrounds" type="Node2D" parent="." unique_id=1787562092]
+position = Vector2(688, 384)
+
+[node name="Stage 3" type="Sprite2D" parent="Backgrounds" unique_id=926098009]
+texture = ExtResource("1_ecxui")
+
+[node name="Stage 15" type="Sprite2D" parent="Backgrounds" unique_id=323866220]
+centered = false
+
+[node name="WorldColliders" type="Node2D" parent="Backgrounds" unique_id=2030146009]
+position = Vector2(-688, -384)
+
+[node name="FarSide" type="StaticBody2D" parent="Backgrounds/WorldColliders" unique_id=1823519940]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgrounds/WorldColliders/FarSide" unique_id=1219372346]
+position = Vector2(688.5, 408)
+shape = SubResource("RectangleShape2D_14w7c")
+
+[node name="NearSide" type="StaticBody2D" parent="Backgrounds/WorldColliders" unique_id=465889810]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgrounds/WorldColliders/NearSide" unique_id=306156872]
+position = Vector2(688.5, 752)
+shape = SubResource("RectangleShape2D_ecxui")
+
+[node name="Left" type="StaticBody2D" parent="Backgrounds/WorldColliders" unique_id=2000672280]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgrounds/WorldColliders/Left" unique_id=566580873]
+position = Vector2(-7.1686673e-06, 604)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_erodg")
+
+[node name="Right" type="StaticBody2D" parent="Backgrounds/WorldColliders" unique_id=1942037943]
+position = Vector2(8, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Backgrounds/WorldColliders/Right" unique_id=1752668]
+position = Vector2(1369, 604)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_3kwj0")
