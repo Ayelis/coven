@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b1nsmrulp6kke"]
+
+[ext_resource type="Script" uid="uid://b7cxa41h22g48" path="res://scenes/ui/combo_indicator.gd" id="1_dvs3h"]
+
+[node name="ComboIndicator" type="Label" unique_id=201346937]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "100"
+script = ExtResource("1_dvs3h")
+duration_combo_timeout = null

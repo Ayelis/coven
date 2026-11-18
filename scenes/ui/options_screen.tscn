@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://grw1weh0j0ww"]
+
+[ext_resource type="Script" uid="uid://dpe863a2ipnf2" path="res://scenes/ui/options_screen.gd" id="1_fpwlp"]
+
+[node name="OptionsScreen" type="Control" unique_id=1081216319]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fpwlp")

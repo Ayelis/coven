@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d3h0d4m8p8lo"]
+
+[ext_resource type="Script" uid="uid://dxsfmjsakwhg1" path="res://scenes/ui/score_indicator.gd" id="1_p3m8a"]
+
+[node name="ScoreIndicator" type="Label" unique_id=201346937]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "100"
+script = ExtResource("1_p3m8a")

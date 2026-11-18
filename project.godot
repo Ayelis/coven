@@ -15,12 +15,18 @@ run/main_scene="uid://dhgy8u6k0flyi"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
+[autoload]
+
+EntityManager="*uid://c25mi4od2dcrq"
+StageManager="*uid://dm02pqdsgw5ie"
+DamageManager="*uid://c7gbpftcna2u7"
+
 [display]
 
 window/size/viewport_width=470
 window/size/viewport_height=260
-window/size/window_width_override=1000
-window/size/window_height_override=640
+window/size/window_width_override=940
+window/size/window_height_override=520
 window/stretch/mode="viewport"
 window/stretch/scale_mode="integer"
 

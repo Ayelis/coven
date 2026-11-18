@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://boed2ig06pr7d"]
+
+[ext_resource type="Script" uid="uid://clixxwvr67uiv" path="res://scenes/ui/death_screen.gd" id="1_if853"]
+
+[node name="DeathScreen" type="MarginContainer" unique_id=428575374]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+script = ExtResource("1_if853")
+
+[node name="Border" type="ColorRect" parent="." unique_id=201725898]
+layout_mode = 2
+color = Color(0.46229059, 0.46229059, 0.46229059, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Border" unique_id=2054216466]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Contents" type="ColorRect" parent="Border/MarginContainer" unique_id=645419035]
+layout_mode = 2
+color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Border/MarginContainer/Contents" unique_id=862942585]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = -25.0
+offset_right = 38.5
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Prompt" type="Label" parent="Border/MarginContainer/Contents/VBoxContainer" unique_id=1522769802]
+layout_mode = 2
+text = "Respawn?"
+horizontal_alignment = 1
+
+[node name="Countdown" type="Label" parent="Border/MarginContainer/Contents/VBoxContainer" unique_id=120437709]
+layout_mode = 2
+text = "10"
+horizontal_alignment = 1
+
+[node name="Timer" type="Timer" parent="." unique_id=989894029]

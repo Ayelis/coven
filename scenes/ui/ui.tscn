@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://denhpodkyov3j"]
+
+[ext_resource type="Script" uid="uid://b7rk6wsehoddp" path="res://scenes/ui/ui.gd" id="1_aac20"]
+[ext_resource type="PackedScene" uid="uid://cgr5gp6bm5cox" path="res://scenes/ui/healthbar.tscn" id="2_0dwhk"]
+[ext_resource type="PackedScene" uid="uid://d3h0d4m8p8lo" path="res://scenes/ui/score_indicator.tscn" id="2_g5kmx"]
+[ext_resource type="PackedScene" uid="uid://b1nsmrulp6kke" path="res://scenes/ui/combo_indicator.tscn" id="3_0dwhk"]
+
+[node name="UI" type="CanvasLayer" unique_id=1014191040]
+script = ExtResource("1_aac20")
+
+[node name="UIContainer" type="Control" parent="." unique_id=1762224627]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="EnemyAvatar" type="TextureRect" parent="UIContainer" unique_id=1275638659]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayerAvatar" type="TextureRect" parent="UIContainer" unique_id=1410734130]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PlayerHealthbar2" parent="UIContainer" unique_id=1581327733 instance=ExtResource("2_0dwhk")]
+layout_mode = 1
+
+[node name="EnemyHealthbar" type="Control" parent="UIContainer" unique_id=628105044]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="WhiteBorder" type="ColorRect" parent="UIContainer/EnemyHealthbar" unique_id=2062655678]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ContentBackground" type="ColorRect" parent="UIContainer/EnemyHealthbar" unique_id=1888924517]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthGauge" type="TextureRect" parent="UIContainer/EnemyHealthbar" unique_id=148482911]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ComboIndicator" parent="UIContainer" unique_id=718865215 instance=ExtResource("3_0dwhk")]
+layout_mode = 0
+
+[node name="ScoreIndicator" parent="UIContainer" unique_id=201346937 instance=ExtResource("2_g5kmx")]
+layout_mode = 0

@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://53ehsy0148iv"]
+
+[ext_resource type="Script" uid="uid://bme6bximud0t1" path="res://scenes/ui/game_over_screen.gd" id="1_gt22q"]
+
+[node name="GameOverScreen" type="Control" unique_id=726713941]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gt22q")
+
+[node name="Background" type="ColorRect" parent="." unique_id=909722812]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.078431375, 0.078431375, 0.078431375, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Background" unique_id=18562941]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background/MarginContainer" unique_id=1479604685]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Background/MarginContainer/VBoxContainer" unique_id=1600664831]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "GAME OVER"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Background/MarginContainer/VBoxContainer" unique_id=650629039]
+layout_mode = 2
+
+[node name="ScoreIndicator" type="Label" parent="Background/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1738918174]
+layout_mode = 2
+text = "SCORE:"
+
+[node name="Timer" type="Timer" parent="." unique_id=852145963]

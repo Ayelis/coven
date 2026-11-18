@@ -18,28 +18,28 @@ func _process(delta:float) -> void:
 	var zooms = snapped((curved_depth * 2.5) + 1.0, 0.01)
 	scenery.scale = Vector2(zooms, zooms)
 	
-	#position.x = player.position.x
-
-	# 1. Normalize player_depth (assuming 0.0 is front, 2.0 is max back)
+		# 1. Normalize player_depth (assuming 0.0 is front, 2.0 is max back)
 	var depth_progress = clamp(player_y / 2.0, 0.0, 1.0)
-	curved_depth = pow(depth_progress, 1.25)
+	curved_depth = pow(depth_progress, 1.1) #1.25
 
 	# 2. Expand horizontal player boundaries based on depth
 	#-300 - 780
-	#-600 - 1100
 	#-1800 - 3100
+	#235 - mid_x
 	var min_x = lerp(23.0, -300.0, curved_depth)
 	var max_x = lerp(445.0, 780.0, curved_depth)#var max_x = lerp(445.0, 3100.0, curved_depth)
-	
+
+	var foreground_x = (player.position.x/(max_x - min_x)*422)+23
 	player.position.x = clamp(player.position.x, min_x, max_x)
 	
 	# 3. Smoothly shift camera from locked center (234.0) to following player.position.x
 	var screen_center_x = 234.0 # Halfway between 23 and 445
+	#var screen_center_x = (max_x-min_x) /2
 	var target_cam_x = lerp(screen_center_x, player.position.x, curved_depth)
 
 	# 4. Clamp camera so it never shows past the edges of the scaled background
 	var cam_limit_left = lerp(screen_center_x, -1600.0, curved_depth) # Adjust -1600 to match art edge
 	var cam_limit_right = lerp(screen_center_x, 2900.0, curved_depth) # Adjust 2900 to match art edge
-	
+	print("ppx",player.position.x)
 	position.x = clamp(target_cam_x, cam_limit_left, cam_limit_right)
 	
