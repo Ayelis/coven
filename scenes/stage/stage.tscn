@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://kv7eg05nok54"]
 
 [ext_resource type="Texture2D" uid="uid://psu87a35aqy6" path="res://assets/art/03.jpg" id="1_ecxui"]
+[ext_resource type="PackedScene" uid="uid://c60vjydhwtxfv" path="res://scenes/props/barrel.tscn" id="2_erodg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_14w7c"]
 size = Vector2(1397, 20)
@@ -15,6 +16,10 @@ position = Vector2(688, 384)
 
 [node name="Stage 3" type="Sprite2D" parent="Backgrounds" unique_id=926098009]
 texture = ExtResource("1_ecxui")
+
+[node name="Barrel" parent="Backgrounds/Stage 3" unique_id=652513793 instance=ExtResource("2_erodg")]
+position = Vector2(939.9999, 674.2856)
+scale = Vector2(8.571427, 8.571427)
 
 [node name="Stage 15" type="Sprite2D" parent="Backgrounds" unique_id=323866220]
 centered = false

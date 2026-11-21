@@ -18,14 +18,9 @@ script = ExtResource("1_aqk2v")
 position = Vector2(-6.999999, -4.999998)
 scale = Vector2(0.35, 0.35)
 
-[node name="Player" parent="." unique_id=227219704 instance=ExtResource("2_fj7yv")]
-position = Vector2(235, 245)
-scale = Vector2(4.5, 4.5)
-
 [node name="Camera" parent="." unique_id=1932093848 node_paths=PackedStringArray("player", "bg") instance=ExtResource("3_tlwt5")]
-visible = false
 position = Vector2(235, 130)
-player = NodePath("../Player")
+player = NodePath("../ActorsContainer/Player")
 bg = NodePath("../Stage")
 
 [node name="InvisWalls" type="Node2D" parent="Camera" unique_id=148259046]
@@ -41,3 +36,12 @@ shape = SubResource("RectangleShape2D_14w7c")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Camera/InvisWalls/StaticBody2D2" unique_id=895476875]
 position = Vector2(-240, 68.5)
 shape = SubResource("RectangleShape2D_vfqgw")
+
+[node name="ActorsContainer" type="Node2D" parent="." unique_id=801123095]
+y_sort_enabled = true
+
+[node name="Player" parent="ActorsContainer" unique_id=227219704 instance=ExtResource("2_fj7yv")]
+position = Vector2(235, 245)
+scale = Vector2(4.5, 4.5)
+collision_layer = 2
+collision_mask = 9
